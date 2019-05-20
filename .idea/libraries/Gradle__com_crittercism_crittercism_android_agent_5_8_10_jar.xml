@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.crittercism:crittercism-android-agent:5.8.10@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crittercism/crittercism-android-agent/5.8.10/96985aa41a42012381117ef56ddc48c95c9383b2/crittercism-android-agent-5.8.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crittercism/crittercism-android-agent/5.8.10/2dbae823f3b5acc6d55e256585d3e21257368e6d/crittercism-android-agent-5.8.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

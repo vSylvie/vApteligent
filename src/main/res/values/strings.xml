@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">
+        Flow app
+    </string>
+
+    <string name="title">
+        Workflow
+    </string>
+
+    <string name="use_case">
+        This workflow is around Boxer. Boxer is Workspace One email application. The error button will lead to a crash of Boxer. The rollback button will reestablish the initial state of the app before the crash.
+    </string>
+
+    <string name="error">
+        Error
+    </string>
+
+    <string name="rollback">
+        Rollback
+    </string>
+
+</resources>
