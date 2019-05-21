@@ -42,21 +42,33 @@ public class MainActivity extends AppCompatActivity {
         TextView t1 = findViewById(R.id.title);
         TextView text = findViewById(R.id.use_case);
 
-        t1.setTextColor(Color.parseColor("#FF4500"));
-        text.setTextColor(Color.parseColor("#FF4500"));
-        errorbutton.setTextColor(Color.parseColor("#FF4500"));
+        t1.setTextColor(Color.parseColor("#FF0000"));
+        text.setTextColor(Color.parseColor("#FF0000"));
+        errorbutton.setTextColor(Color.parseColor("#FF0000"));
 
     }
+
+    public void btnrollback (View view)
+    {
+        Button errorbutton = findViewById(R.id.error_button);
+        TextView t1 = findViewById(R.id.title);
+        TextView text = findViewById(R.id.use_case);
+
+        t1.setTextColor(Color.parseColor("#000000"));
+        text.setTextColor(Color.parseColor("#000000"));
+        errorbutton.setTextColor(Color.parseColor("#000000"));
+
+    }
+}
+
 /*        Button errorbutton = findViewById(R.id.error_button);
-        errorbutton.setOnClickListener(new View.OnClickListener() {
+          errorbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Do something in response to button click
 
             }
         });*/
-
-}
 
         //public static void getPreviousSessionCrashData (CrittercismCallback<CrashData> crashListener)
 
