@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".fragments.UsageFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#efeff4"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp"
+        android:focusable="false"
+        android:text="@string/usage"
+        android:id="@+id/customizeusage" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stackFramesLayout2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/errorButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="10sp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"></View>
+
+        <Button
+            android:id="@+id/androidButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/android"
+            android:textColor="#0000FF" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"></View>
+
+        <Button
+            android:id="@+id/iosButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/ios"
+            android:textColor="#0000FF" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"></View>
+
+    </LinearLayout>
+
+</LinearLayout>

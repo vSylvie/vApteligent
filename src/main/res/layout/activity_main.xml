@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
+    android:id="@+id/LinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,52 +12,56 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:background="@android:color/black"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         android:text="@string/app_name"
+        android:theme="?attr/actionBarTheme"
 
+        android:visibility="visible"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:titleTextColor="@color/colorPrimary">
+
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:background="@android:color/black"
-        app:tabSelectedTextColor="@android:color/holo_purple"
+        android:elevation="6dp"
+
+        app:tabIndicatorColor="#03A9F4"
+        app:tabSelectedTextColor="@android:color/holo_blue_dark"
         app:tabTextColor="@android:color/white">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabCrash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/crash" />
+            android:text="@string/tabCrash" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabNetwork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/network" />
+            android:text="@string/tabNetwork" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabFlows"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/flows" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabOther"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other" />
+            android:text="@string/tabFlows" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>

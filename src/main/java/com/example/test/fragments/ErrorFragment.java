@@ -41,7 +41,6 @@ import com.example.test.errors.NullPointerCustomError;
 import com.example.test.errors.RecursiveNativeCustomError;
 import com.example.test.errors.StrdupNativeCustomError;
 
-
 public class ErrorFragment extends Fragment {
 
     private View v;
@@ -49,19 +48,24 @@ public class ErrorFragment extends Fragment {
     private CustomError baseError = new CustomError();
     private int stackLevel = 0;
 
+    /**
+     * 2 types of ErrorType
+     */
     private enum ErrorType {
         CRASH,
         EXCEPTION
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         this.v = inflater.inflate(R.layout.fragment_error, container, false);
 
-        this.stackFrameLayout = (LinearLayout) v.findViewById(R.id.stackFramesLayout);
+        this.stackFrameLayout = v.findViewById(R.id.stackFramesLayout);
 
-        Button addFrameButton = (Button) v.findViewById(R.id.addButton);
+        Button addFrameButton = v.findViewById(R.id.addButton);
         addFrameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +73,7 @@ public class ErrorFragment extends Fragment {
             }
         });
 
-        Button clearFramesButton = (Button) v.findViewById(R.id.clearButton);
+        Button clearFramesButton = v.findViewById(R.id.clearButton);
         clearFramesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +81,8 @@ public class ErrorFragment extends Fragment {
             }
         });
 
+
+        //setErrorAction(R.id.button, class, extends
         setErrorAction(R.id.nullPointerCrashButton, NullPointerCustomError.class, ErrorType.CRASH);
         setErrorAction(R.id.indexOutOfBoundsCrashButton, IndexOutOfBoundsCustomError.class, ErrorType.CRASH);
         setErrorAction(R.id.jsonExceptionButton, JsonCustomError.class, ErrorType.EXCEPTION);
@@ -95,7 +101,7 @@ public class ErrorFragment extends Fragment {
      * @param type Either a CRASH or EXCEPTION enum
      */
     private void setErrorAction(int buttonId, final Class<? extends CustomError> errorClass, final ErrorType type) {
-        Button b = (Button) v.findViewById(buttonId);
+        Button b = v.findViewById(buttonId);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +128,8 @@ public class ErrorFragment extends Fragment {
 
     private void showStackFrameDialog() {
         this.stackLevel++;
+
+
 
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment prev = getFragmentManager().findFragmentByTag("dialog");

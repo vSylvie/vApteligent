@@ -1,20 +1,5 @@
 <resources>
-    <string name="app_name">
-        WSO
-    </string>
-
-    <string name="tabcrash">
-        Crash
-    </string>
-    <string name="tabperf">
-        Perf
-    </string>
-    <string name="tabnetwork">
-        Network
-    </string>
-    <string name="tabusage">
-        Usage
-    </string>
+    <string name="app_name">WSO INTELLIGENCE </string>
 
     <string name="title">
         Workflow
@@ -32,18 +17,8 @@
         Rollback
     </string>
 
-    <string name="usage_title">
-        Which one will you choose?
-    </string>
-
-    <string name="Android">
-        Android
-    </string>
-
-    <string name="iOS">
-        iOS
-    </string>
-
+    <string name="android">Android</string>
+    <string name="ios">iOS</string>
 
 
     <string name="clear">Clear</string>
@@ -103,8 +78,11 @@
     <string name="app_sandbox_title">Sandbox</string>
     <string name="app_sandbox_description">Send Intelligence Data to Sandbox?</string>
 
-    <string name="crash">CRASH</string>
-    <string name="network">NETWORK</string>
-    <string name="flows">USER FLOWS</string>
-    <string name="other">OTHER</string>
+    <string name="tabCrash">CRASH</string>
+    <string name="tabNetwork">NETWORK</string>
+    <string name="tabFlows">USER FLOWS</string>
+    <string name="tabOther">OTHER</string>
+
+    <string name="usage">Opinion Poll</string>
+
 </resources>

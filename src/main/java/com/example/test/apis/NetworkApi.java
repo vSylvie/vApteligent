@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.test.errors;
+package com.example.test.apis;
 
-public class  NativeCustomError extends CustomError {
+public interface NetworkApi {
 
-    protected native boolean crash(String crashType);
-
-    static {
-        System.loadLibrary("crash");
-    }
-
+    /**
+     * Executes the given network request using a specific network API.
+     * @param request A description of a network request
+     * @return The response from the server
+     */
+    GenericResponse execute(GenericRequest request);
 }
