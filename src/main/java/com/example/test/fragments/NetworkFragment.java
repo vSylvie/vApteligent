@@ -203,6 +203,12 @@ public class NetworkFragment extends Fragment {
             return null;
         }
 
+        /**
+         * HTTP status code, generally 100-599, e.g. 200 == OK, 400 == Bad Request, can be 0 if there is an error
+         * @param aVoid
+         */
+
+
         @Override
         protected void onPostExecute(Void aVoid) {
             String msg = "(" + this.response.getStatus() + ") " + this.request.getUrl().toExternalForm();

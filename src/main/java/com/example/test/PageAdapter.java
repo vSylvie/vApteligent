@@ -7,11 +7,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.test.fragments.ErrorFragment;
 import com.example.test.fragments.NetworkFragment;
 import com.example.test.fragments.UsageFragment;
+import com.example.test.fragments.UserFlowsFragment;
 
 
 public class PageAdapter extends FragmentPagerAdapter {
 
-    private String[] tabTitles = new String[]{"CRASH", "NETWORK", "FLOWS"};
+    private String[] tabTitles = new String[]{"CRASH", "NETWORK", "USAGE","USER FLOWS"};
 
     PageAdapter(FragmentManager fm){
         super(fm);
@@ -32,11 +33,13 @@ public class PageAdapter extends FragmentPagerAdapter {
                 return new NetworkFragment();
             case 2:
                 return new UsageFragment();
+            case 3:
+                return new UserFlowsFragment();
             default:
                 throw new AssertionError("Unrecognized tab: " + position);
         }
     }
 
     @Override
-    public int getCount(){return 3;}
+    public int getCount(){return 4;}
 }

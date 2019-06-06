@@ -26,7 +26,7 @@ import java.util.LinkedList;
  */
 public class CustomError {
 
-    public static enum StackFrame {
+    public enum StackFrame {
         FUNCTION_A,
         FUNCTION_B,
         FUNCTION_C,

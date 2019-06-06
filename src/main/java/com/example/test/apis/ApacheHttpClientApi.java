@@ -21,6 +21,7 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 import cz.msebera.android.httpclient.HttpResponse;
@@ -61,7 +62,7 @@ public class ApacheHttpClientApi implements NetworkApi {
             apacheRequest = new HttpGet(request.getUrl().toURI());
         } else if (request.getMethod().toUpperCase(Locale.getDefault()).equals("POST")) {
             HttpPost post = new HttpPost(request.getUrl().toURI());
-            post.setEntity(new ByteArrayEntity(request.getPostData().getBytes("UTF8")));
+            post.setEntity(new ByteArrayEntity(request.getPostData().getBytes(StandardCharsets.UTF_8)));
             apacheRequest = post;
         }
 

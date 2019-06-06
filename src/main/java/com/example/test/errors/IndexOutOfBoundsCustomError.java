@@ -20,7 +20,7 @@ public class IndexOutOfBoundsCustomError extends CustomError {
 
     @Override
     protected void performError() throws Throwable {
-        int abc[] = new int[3];
+        int[] abc = new int[3];
         android.util.Log.e("WSO App Analytics", "Index out of bounds thrown here" + abc[5]);
     }
 

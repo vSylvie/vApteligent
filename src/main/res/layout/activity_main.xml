@@ -50,6 +50,12 @@
             android:text="@string/tabNetwork" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabUsage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tabUsage" />
+
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tabFlows"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

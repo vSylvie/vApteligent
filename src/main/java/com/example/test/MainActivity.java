@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             return appRestrictions.getApplicationRestrictions().getString("AppID");
         } else {
             // no appID provided
-            return new String();
+            return "";
         }
 
     }
