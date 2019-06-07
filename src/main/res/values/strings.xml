@@ -87,4 +87,6 @@
     <string name="usage">Opinion Poll</string>
     <string name="status">Status</string>
 
+    <string name="testdrive_idm_url" translatable="false">https://td-sylvie.vidmpreview.com/SAAS/admin</string>
+
 </resources>

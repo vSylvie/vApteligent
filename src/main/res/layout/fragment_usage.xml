@@ -140,73 +140,73 @@ android:id="@+id/scrollView">
             android:layout_height="1dp"
             android:layout_weight="1" >
         </View>
-    </LinearLayout>
+ </LinearLayout>
+    <!--
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#efeff4"
+          android:textColor="@android:color/darker_gray"
+          android:textSize="20sp"
+          android:focusable="false"
+          android:text="@string/other_breadcrumbs"
+          android:id="@+id/leaveBreadcrumbLabel"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#efeff4"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="20sp"
-        android:focusable="false"
-        android:text="@string/other_breadcrumbs"
-        android:id="@+id/leaveBreadcrumbLabel"/>
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+          <View
+              android:layout_width="0dp"
+              android:layout_height="1dp"
+              android:layout_weight="1" >
+          </View>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/breadcrumbHello"
+              android:id="@+id/breadcrumbHelloButton"
+              style="?android:attr/borderlessButtonStyle"
+              android:textColor="#ff286cff"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/breadcrumbHello"
-            android:id="@+id/breadcrumbHelloButton"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#ff286cff"/>
+          <View
+              android:layout_width="0dp"
+              android:layout_height="1dp"
+              android:layout_weight="1" >
+          </View>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/breadcrumbAbc"
+              android:id="@+id/breadcrumbAbcButton"
+              style="?android:attr/borderlessButtonStyle"
+              android:textColor="#ff286cff"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/breadcrumbAbc"
-            android:id="@+id/breadcrumbAbcButton"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#ff286cff"/>
+          <View
+              android:layout_width="0dp"
+              android:layout_height="1dp"
+              android:layout_weight="1" >
+          </View>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/breadcrumbXyz"
+              android:id="@+id/breadcrumbXyzButton"
+              style="?android:attr/borderlessButtonStyle"
+              android:textColor="#ff286cff"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/breadcrumbXyz"
-            android:id="@+id/breadcrumbXyzButton"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#ff286cff"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
-    </LinearLayout>
-
+          <View
+              android:layout_width="0dp"
+              android:layout_height="1dp"
+              android:layout_weight="1" >
+          </View>
+      </LinearLayout>
+  -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

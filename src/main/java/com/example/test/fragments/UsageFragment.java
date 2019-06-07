@@ -28,8 +28,8 @@ import static com.crittercism.app.Crittercism.leaveBreadcrumb;
  */
 public class UsageFragment extends Fragment{
     private View v;
-    protected String breadcrumb;
-    TextView text;
+    private int cmp;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
@@ -59,25 +59,21 @@ public class UsageFragment extends Fragment{
             return this.v;
     }*/
 
-        setButtonAction(v, R.id.usernameBobButton, new UserNameButtonAction("Bob"));
-        setButtonAction(v, R.id.usernameSueButton, new UserNameButtonAction("Sue"));
-        setButtonAction(v, R.id.usernameJoeButton, new UserNameButtonAction("Joe"));
+        setButtonAction(v, R.id.usernameBobButton, new UserNameButtonAction("Bob", "The user Bob was chosen."));
+        setButtonAction(v, R.id.usernameSueButton, new UserNameButtonAction("Sue", "The user Sue was chosen."));
+        setButtonAction(v, R.id.usernameJoeButton, new UserNameButtonAction("Joe", "tThe user Joe was chosen."));
 
         setButtonAction(v, R.id.level1Button, new MetadataButtonAction("Game Level", "Level 1"));
         setButtonAction(v, R.id.level5Button, new MetadataButtonAction("Game Level", "Level 5"));
         setButtonAction(v, R.id.level7Button, new MetadataButtonAction("Game Level", "Level 7"));
-
-        setButtonAction(v, R.id.breadcrumbAbcButton, new BreadcrumbButtonAction("abc"));
-        setButtonAction(v, R.id.breadcrumbXyzButton, new BreadcrumbButtonAction("xyz"));
-        setButtonAction(v, R.id.breadcrumbHelloButton, new BreadcrumbButtonAction("hello"));
 
         setButtonAction(v, R.id.optInButton, new OptOutButtonAction(false));
         setButtonAction(v, R.id.optOutButton, new OptOutButtonAction(true));
 
         updateOptOutStatusLabel();
 
-        setButtonAction(v, R.id.androidButton, new PollButtonAction("Android"));
-        setButtonAction(v, R.id.iosButton, new PollButtonAction("iOS"));
+        setButtonAction(v, R.id.androidButton, new PollButtonAction("Android", "The user chose Android."));
+        setButtonAction(v, R.id.iosButton, new PollButtonAction("iOS", "The user chose iOS."));
 
         return v;
     }
@@ -95,16 +91,19 @@ public class UsageFragment extends Fragment{
 
     private class UserNameButtonAction implements View.OnClickListener {
 
+        private String breadcrumb;
         private String username;
 
-        private UserNameButtonAction(String username) {
+        private UserNameButtonAction(String username, String breadcrumb) {
             this.username = username;
+            this.breadcrumb = breadcrumb;
         }
 
         @Override
         public void onClick(View v) {
 
             Crittercism.setUsername(this.username);
+            Crittercism.leaveBreadcrumb(this.breadcrumb);
             Toast.makeText(getActivity(), this.username +" selected", Toast.LENGTH_SHORT).show();
         }
     }
@@ -134,22 +133,6 @@ public class UsageFragment extends Fragment{
         }
     }
 
-    private class BreadcrumbButtonAction implements View.OnClickListener {
-
-        private String breadcrumb;
-
-        private BreadcrumbButtonAction(String breadcrumb) {
-            this.breadcrumb = breadcrumb;
-        }
-
-        @Override
-        public void onClick(View v) {
-
-            Crittercism.leaveBreadcrumb(this.breadcrumb);
-            Toast.makeText(getActivity(), this.breadcrumb +" selected", Toast.LENGTH_SHORT).show();
-        }
-    }
-
     private class OptOutButtonAction implements View.OnClickListener {
         private boolean shouldOptOut;
 
@@ -168,15 +151,21 @@ public class UsageFragment extends Fragment{
     private class PollButtonAction implements View.OnClickListener {
 
         private String brand;
+        private String breadcrumb;
+        private int cmp;
 
-        private PollButtonAction(String brand) {this.brand = brand;}
+        private PollButtonAction(String brand, String breadcrumb) {
+            this.brand = brand;
+            this.breadcrumb=breadcrumb;
+        }
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(getActivity(),  "selected", Toast.LENGTH_SHORT).show();}
+            cmp++;
+            Crittercism.leaveBreadcrumb(this.breadcrumb);
+            Toast.makeText(getActivity(),  brand+ " was selected " +cmp+ " times" , Toast.LENGTH_SHORT).show();}
+
     }
-
-
 }
 
 
