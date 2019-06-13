@@ -28,7 +28,7 @@ import static com.crittercism.app.Crittercism.leaveBreadcrumb;
  */
 public class UsageFragment extends Fragment{
     private View v;
-    private int cmp;
+    private int cmp=1;
 
 
     @Override
@@ -59,9 +59,9 @@ public class UsageFragment extends Fragment{
             return this.v;
     }*/
 
-        setButtonAction(v, R.id.usernameBobButton, new UserNameButtonAction("Bob", "The user Bob was chosen."));
-        setButtonAction(v, R.id.usernameSueButton, new UserNameButtonAction("Sue", "The user Sue was chosen."));
-        setButtonAction(v, R.id.usernameJoeButton, new UserNameButtonAction("Joe", "tThe user Joe was chosen."));
+        setButtonAction(v, R.id.usernameBobButton, new UserNameButtonAction("Bob", "The user Bob was selected."));
+        setButtonAction(v, R.id.usernameSueButton, new UserNameButtonAction("Sue", "The user Sue was selected."));
+        setButtonAction(v, R.id.usernameJoeButton, new UserNameButtonAction("Joe", "The user Joe was selected."));
 
         setButtonAction(v, R.id.level1Button, new MetadataButtonAction("Game Level", "Level 1"));
         setButtonAction(v, R.id.level5Button, new MetadataButtonAction("Game Level", "Level 5"));
@@ -72,8 +72,8 @@ public class UsageFragment extends Fragment{
 
         updateOptOutStatusLabel();
 
-        setButtonAction(v, R.id.androidButton, new PollButtonAction("Android", "The user chose Android."));
-        setButtonAction(v, R.id.iosButton, new PollButtonAction("iOS", "The user chose iOS."));
+        setButtonAction(v, R.id.androidButton, new PollButtonAction("Android", "The user selected Android."));
+        setButtonAction(v, R.id.iosButton, new PollButtonAction("iOS", "The user selected iOS."));
 
         return v;
     }

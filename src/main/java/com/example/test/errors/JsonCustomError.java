@@ -25,7 +25,8 @@ public class JsonCustomError extends CustomError {
 
     @Override
     protected void performError() throws Throwable {
-        super.performError();                try {
+        super.performError();
+        try {
             new JSONObject("{ invalid object");
         } catch (JSONException e) {
             Crittercism.logHandledException(e);

@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.RestrictionsManager;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     TabItem tabFlows;
     TabItem tabUsage;
 
+
     String appID = "";
 
 
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+/*        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);*/
 
 /*        appID = getAppConfig();
 
@@ -74,12 +79,6 @@ public class MainActivity extends AppCompatActivity {
             tabLayout.setupWithViewPager(viewPager);
             tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
             tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-
-
-/*        tabLayout.addTab(tabLayout.newTab().setText("CRASH"));
-        tabLayout.addTab(tabLayout.newTab().setText("NETWORK"));
-        tabLayout.addTab(tabLayout.newTab().setText("FLOWS"));
-        tabLayout.addTab(tabLayout.newTab().setText("OTHER"));*/
 
 
             tabCrash = findViewById(R.id.tabCrash);
@@ -166,3 +165,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }*/
 }
+

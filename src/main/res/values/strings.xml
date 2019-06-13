@@ -89,4 +89,19 @@
 
     <string name="testdrive_idm_url" translatable="false">https://td-sylvie.vidmpreview.com/SAAS/admin</string>
 
+    <string name="Email"> Email </string>
+    <string name="password"> Password </string>
+    <string name="login"> Login </string>
+    <string name="createaccount"> No account? Create one </string>
+
+
+    <string name="FirstName"> First Name</string>
+    <string name="LastName"> Last Name </string>
+    <string name="Emailbis"> Email </string>
+    <string name="Passwordbis"> Password </string>
+    <string name="confirmpass"> Confirm Password </string>
+    <string name="signup"> Create one </string>
+    <string name="existingaccount"> Already a member? Log in please </string>
+
+
 </resources>

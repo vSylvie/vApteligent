@@ -12,7 +12,7 @@ import com.example.test.fragments.UserFlowsFragment;
 
 public class PageAdapter extends FragmentPagerAdapter {
 
-    private String[] tabTitles = new String[]{"CRASH", "NETWORK", "USAGE","USER FLOWS"};
+    private String[] tabTitles = new String[]{"USAGE","CRASH", "NETWORK", "USER FLOWS"};
 
     PageAdapter(FragmentManager fm){
         super(fm);
@@ -28,11 +28,11 @@ public class PageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position){
         switch (position){
             case 0:
-                return new ErrorFragment();
-            case 1:
-                return new NetworkFragment();
-            case 2:
                 return new UsageFragment();
+            case 1:
+                return new ErrorFragment();
+            case 2:
+                return new NetworkFragment();
             case 3:
                 return new UserFlowsFragment();
             default:

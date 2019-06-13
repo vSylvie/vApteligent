@@ -130,9 +130,6 @@ public class ErrorFragment extends Fragment {
 
     private void showStackFrameDialog() {
         this.stackLevel++;
-
-
-
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         Fragment prev = getFragmentManager().findFragmentByTag("dialog");
         if (prev != null) {
