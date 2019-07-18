@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import com.example.test.R;
@@ -45,8 +46,11 @@ public class UserFlowsFragment extends Fragment {
                 Button fail = view.findViewById(R.id.failButton);
                 fail.setOnClickListener(new Fail_user_flowsButtonAction(txnName));
 
-                Button increment = view.findViewById(R.id.valueIncrementButton);
-                increment.setOnClickListener(new Increment_user_flowsButtonAction(txnName));
+                //Button increment = view.findViewById(R.id.valueIncrementButton);
+                //increment.setOnClickListener(new Increment_user_flowsButtonAction(txnName));
+
+                Button cancel = view.findViewById(R.id.cancelButton);
+                cancel.setOnClickListener(new Cancel_user_flowsButtonAction(txnName));
 
                 return view;
             }
@@ -68,18 +72,11 @@ public class UserFlowsFragment extends Fragment {
     public static void failUserflow (String user_flowsName){
         Crittercism.failUserFlow(user_flowsName);
     }
-/*    public static void setUserflowValue (String user_flowsName){
-        Crittercism.setUserFlowValue(user_flowsName, Crittercism.getUserFlowValue(user_flowsName));
+    public static void cancelUserflow (String user_flowName){
+        Crittercism.cancelUserFlow(user_flowName);
     }
-    public static void getUserflowValue (String user_flowsName){
-        Crittercism.getUserFlowValue(user_flowsName);
-    }*/
 
-
-
-
-
-    private static class Begin_user_flowsButtonAction extends user_flowsButtonAction {
+    private class Begin_user_flowsButtonAction extends user_flowsButtonAction {
 
         private Begin_user_flowsButtonAction(String user_flowsName) {
             super(user_flowsName);
@@ -88,10 +85,11 @@ public class UserFlowsFragment extends Fragment {
         @Override
         public void onClick(View v) {
             beginUserflow(this.user_flowsName);
+            Toast.makeText(getActivity(), "The User flow started.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private static class End_user_flowsButtonAction extends user_flowsButtonAction {
+    private class End_user_flowsButtonAction extends user_flowsButtonAction {
 
         private End_user_flowsButtonAction(String user_flowsName) {
             super(user_flowsName);
@@ -100,10 +98,11 @@ public class UserFlowsFragment extends Fragment {
         @Override
         public void onClick(View v) {
             endUserflow(this.user_flowsName);
+            Toast.makeText(getActivity(), "The User flow ended.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private static class Fail_user_flowsButtonAction extends user_flowsButtonAction {
+    private class Fail_user_flowsButtonAction extends user_flowsButtonAction {
 
         private Fail_user_flowsButtonAction(String user_flowsName) {
             super(user_flowsName);
@@ -112,10 +111,22 @@ public class UserFlowsFragment extends Fragment {
         @Override
         public void onClick(View v) {
             failUserflow(this.user_flowsName);
+            Toast.makeText(getActivity(), "The User flow failed.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private static class Increment_user_flowsButtonAction extends user_flowsButtonAction {
+    private class Cancel_user_flowsButtonAction extends user_flowsButtonAction {
+
+        private Cancel_user_flowsButtonAction(String user_flowsName){super (user_flowsName);}
+
+        @Override
+        public void onClick(View v){
+            cancelUserflow(this.user_flowsName);
+            Toast.makeText(getActivity(), "The User flow is canceled.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /*private class Increment_user_flowsButtonAction extends user_flowsButtonAction {
 
         private Increment_user_flowsButtonAction(String user_flowsName) {
             super(user_flowsName);
@@ -130,8 +141,9 @@ public class UserFlowsFragment extends Fragment {
             }
 
             Crittercism.setUserFlowValue(this.user_flowsName, value  + 1);
+            Toast.makeText(getActivity(), "Value button selected", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
     private static abstract class user_flowsButtonAction implements View.OnClickListener {
         protected String user_flowsName;

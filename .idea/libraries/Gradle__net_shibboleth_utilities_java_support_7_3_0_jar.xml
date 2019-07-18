@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.shibboleth.utilities:java-support:7.3.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.shibboleth.utilities/java-support/7.3.0/288ecc17f2025ad14f768163d42808987d5ffcd6/java-support-7.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.shibboleth.utilities/java-support/7.3.0/373e26fc8ee779221d83da120a23917da817d908/java-support-7.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

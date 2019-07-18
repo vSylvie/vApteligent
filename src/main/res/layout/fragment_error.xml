@@ -25,6 +25,17 @@
         android:text="@string/forceCrash"
         android:id="@+id/forceCrashLabel"/>
 
+    <TextView
+        android:id="@+id/carshexplanation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_crash"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,70 +113,5 @@
         android:id="@+id/cppNativeCrashButton"
         android:gravity="center_vertical"
         style="?android:attr/borderlessButtonStyle"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#efeff4"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="20sp"
-        android:focusable="false"
-        android:text="@string/customizeStackTrace"
-        android:id="@+id/customizeStackTraceTextView" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/stackFramesLayout">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:padding="10sp"
-        android:baselineAligned="false"
-        android:id="@+id/errorButtonsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:orientation="horizontal">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/addButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#0000FF"
-            android:layout_weight="0"
-            android:text="@string/add"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:id="@+id/clearButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#0000FF"
-            android:layout_weight="0"
-            android:text="@string/clear"
-            />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </View>
-
-    </LinearLayout>
-
 </LinearLayout>
 </ScrollView>

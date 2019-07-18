@@ -15,6 +15,7 @@
         android:focusable="false"
         android:id="@+id/user_flowsName"/>
 
+
     <LinearLayout android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40sp"
@@ -70,11 +71,19 @@
             android:layout_weight="1" >
         </View>
 
-        <Button
+<!--        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/incrementValue"
             android:id="@+id/valueIncrementButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#ff286cff"/>-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/cancelButton"
             style="?android:attr/borderlessButtonStyle"
             android:textColor="#ff286cff"/>
 

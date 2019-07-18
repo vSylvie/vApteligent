@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,12 +25,12 @@ import static com.crittercism.app.Crittercism.leaveBreadcrumb;
 
 /**
  * Ce fragment permet de connaître le nombre de click pour chaque bouton ==>voir comment le faire remonter sur Apteligent
- * This fragment give us the number of clicks of each button ==> find how to enable it on Apteligent.
+ * This fragment give us the number of clicks for each button ==> find how to enable it on Apteligent.
  */
 public class UsageFragment extends Fragment{
     private View v;
     private int cmp=1;
-
+    private int res;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
@@ -37,31 +38,10 @@ public class UsageFragment extends Fragment{
 
             this.v = inflater.inflate(R.layout.fragment_usage, container, false);
 
-   /*         Button androidFrameButton = v.findViewById(R.id.androidButton);
-            Button iosFramesButton = v.findViewById(R.id.iosButton);
+        setButtonAction(v, R.id.usernameBobButton, new UserNameButtonAction("Bob", "The user Tony was selected."));
+        setButtonAction(v, R.id.usernameSueButton, new UserNameButtonAction("Sue", "The user Lea was selected."));
+        //setButtonAction(v, R.id.usernameJoeButton, new UserNameButtonAction("Joe", "The user Joe was selected."));
 
-            androidFrameButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Crittercism.leaveBreadcrumb("Android");
-                    //Toast.makeText(getActivity(), "Android selected", Toast.LENGTH_SHORT).show();
-
-                }
-            });
-
-            iosFramesButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Crittercism.leaveBreadcrumb("iOS");
-                    //Toast.makeText(getActivity(), "iOS selected", Toast.LENGTH_SHORT).show();
-                }
-            });
-            return this.v;
-    }*/
-
-        setButtonAction(v, R.id.usernameBobButton, new UserNameButtonAction("Bob", "The user Bob was selected."));
-        setButtonAction(v, R.id.usernameSueButton, new UserNameButtonAction("Sue", "The user Sue was selected."));
-        setButtonAction(v, R.id.usernameJoeButton, new UserNameButtonAction("Joe", "The user Joe was selected."));
 
         setButtonAction(v, R.id.level1Button, new MetadataButtonAction("Game Level", "Level 1"));
         setButtonAction(v, R.id.level5Button, new MetadataButtonAction("Game Level", "Level 5"));
@@ -77,6 +57,8 @@ public class UsageFragment extends Fragment{
 
         return v;
     }
+
+
 
     private void setButtonAction(View v, int id, View.OnClickListener listener) {
         Button button = v.findViewById(id);
@@ -94,14 +76,14 @@ public class UsageFragment extends Fragment{
         private String breadcrumb;
         private String username;
 
+
         private UserNameButtonAction(String username, String breadcrumb) {
-            this.username = username;
+            this.username = username ;
             this.breadcrumb = breadcrumb;
         }
 
         @Override
         public void onClick(View v) {
-
             Crittercism.setUsername(this.username);
             Crittercism.leaveBreadcrumb(this.breadcrumb);
             Toast.makeText(getActivity(), this.username +" selected", Toast.LENGTH_SHORT).show();
@@ -161,7 +143,7 @@ public class UsageFragment extends Fragment{
 
         @Override
         public void onClick(View v) {
-            cmp++;
+            res =cmp++;
             Crittercism.leaveBreadcrumb(this.breadcrumb);
             Toast.makeText(getActivity(),  brand+ " was selected " +cmp+ " times" , Toast.LENGTH_SHORT).show();}
 

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.opensaml:opensaml-saml-api:3.3.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opensaml/opensaml-saml-api/3.3.0/c9611395e073206e59816b0b5ce5166450e8101e/opensaml-saml-api-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opensaml/opensaml-saml-api/3.3.0/297c50ed3ba0389bc221f3abe2561f9541775d8f/opensaml-saml-api-3.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

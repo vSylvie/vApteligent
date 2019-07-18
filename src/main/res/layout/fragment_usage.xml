@@ -10,6 +10,7 @@ android:id="@+id/scrollView">
     android:layout_height="wrap_content"
     android:verticalScrollbarPosition="right"
     android:background="@android:color/white">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +20,17 @@ android:id="@+id/scrollView">
         android:focusable="false"
         android:text="@string/other_username"
         android:id="@+id/setUsernameLabel"/>
+
+    <TextView
+        android:id="@+id/textusernameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_username"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -31,13 +43,14 @@ android:id="@+id/scrollView">
             android:layout_weight="1" >
         </View>
 
+
         <Button
             android:id="@+id/usernameBobButton"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/userNameBob"
+            android:text="Tony"
             android:textColor="#ff286cff"
             android:textIsSelectable="false" />
 
@@ -50,13 +63,13 @@ android:id="@+id/scrollView">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/userNameSue"
+            android:text="Lea"
             android:id="@+id/usernameSueButton"
             android:layout_gravity="center_horizontal"
             style="?android:attr/borderlessButtonStyle"
             android:textColor="#ff286cff"/>
 
-        <View
+<!--        <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1" >
@@ -69,7 +82,7 @@ android:id="@+id/scrollView">
             android:id="@+id/usernameJoeButton"
             android:layout_gravity="center_horizontal"
             style="?android:attr/borderlessButtonStyle"
-            android:textColor="#ff286cff"/>
+            android:textColor="#ff286cff"/>-->
 
         <View
             android:layout_width="0dp"
@@ -87,6 +100,17 @@ android:id="@+id/scrollView">
         android:focusable="false"
         android:text="@string/other_metadata"
         android:id="@+id/setMetadataLabel"/>
+
+    <TextView
+        android:id="@+id/textmetadataLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_metadata"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -217,6 +241,18 @@ android:id="@+id/scrollView">
         android:id="@+id/statusText"
         android:text="@string/status"/>
 
+    <TextView
+        android:id="@+id/textstatusLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_status"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -267,6 +303,18 @@ android:id="@+id/scrollView">
         android:focusable="false"
         android:text="@string/usage"
         android:id="@+id/customizeusage" />
+
+    <TextView
+        android:id="@+id/textpollLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_poll"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
 
     <LinearLayout
         android:orientation="horizontal"

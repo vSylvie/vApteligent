@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.coveo:saml-client:3.0.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.coveo/saml-client/3.0.1/dd73725796955c0595413585a43d936715a27e1/saml-client-3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.coveo/saml-client/3.0.1/6e90977b5b08c6328c6d8dac7478f6a2cf2eaaeb/saml-client-3.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

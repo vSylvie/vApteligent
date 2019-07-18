@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.cryptacular:cryptacular:1.1.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.cryptacular/cryptacular/1.1.1/fb63bf067d278e11eb74c6ff6139493d0df4e8a9/cryptacular-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.cryptacular/cryptacular/1.1.1/226355c7d3eb3adf095e1587777fd7e795f3782b/cryptacular-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,21 +1,5 @@
 <resources>
-    <string name="app_name">WSO INTELLIGENCE </string>
-
-    <string name="title">
-        Workflow
-    </string>
-
-    <string name="use_case">
-        This workflow is around Boxer. Boxer is Workspace One email application. The error button will lead to a crash of Boxer. The rollback button will reestablish the initial state of the app before the crash.
-    </string>
-
-    <string name="error">
-        Error
-    </string>
-
-    <string name="rollback">
-        Rollback
-    </string>
+    <string name="app_name"> vApteligent Demo </string>
 
     <string name="android">Android</string>
     <string name="ios">iOS</string>
@@ -23,7 +7,7 @@
 
     <string name="clear">Clear</string>
     <string name="other_username">Set Username:</string>
-    <string name="other_metadata">Set Metadata (game level):</string>
+    <string name="other_metadata">Set Game Level:</string>
     <string name="other_breadcrumbs">Leave Breadcrumb:</string>
     <string name="add">Add</string>
     <string name="begin">begin</string>
@@ -81,27 +65,30 @@
 
     <string name="tabCrash">CRASH</string>
     <string name="tabNetwork">NETWORK</string>
-    <string name="tabFlows">USER FLOWS</string>
-    <string name="tabUsage">USAGE</string>
+    <string name="tabFlows">FLOWS</string>
+    <string name="tabUsage">USER</string>
 
     <string name="usage">Opinion Poll</string>
     <string name="status">Status</string>
 
     <string name="testdrive_idm_url" translatable="false">https://td-sylvie.vidmpreview.com/SAAS/admin</string>
+    <string name="cancel"> Cancel </string>
 
     <string name="Email"> Email </string>
     <string name="password"> Password </string>
     <string name="login"> Login </string>
-    <string name="createaccount"> No account? Create one </string>
+    <string name="link_signup"> No account? Create one </string>
 
+    <string name="text_username"> This part will allow the user to search the crashes according to the username in Apteligent console. </string>
+    <string name="text_metadata"> This part will attach the username to a specific data. This information will be displayed on Apteligent console. </string>
+    <string name="text_status"> This part will allow the information to display in Apteligent console or not. </string>
+    <string name="text_poll"> This part will give the number of clicks for the following buttons.  </string>
+    <string name="text_flow"> The begin button will start the user flow. The end button will successfully finish the user flow. The fail button will fail the user flow. The value will increment the user flow. </string>
+    <string name="text_crash" > The following buttons will lead to the app crashes. The crashes will be displayed in the console.</string>
 
-    <string name="FirstName"> First Name</string>
-    <string name="LastName"> Last Name </string>
-    <string name="Emailbis"> Email </string>
-    <string name="Passwordbis"> Password </string>
-    <string name="confirmpass"> Confirm Password </string>
-    <string name="signup"> Create one </string>
-    <string name="existingaccount"> Already a member? Log in please </string>
+    <string name="action_menu">  Advanced version </string>
+    <string name="action_return">  Back to App </string>
 
+    <string name="username"> Username  </string>
 
 </resources>
