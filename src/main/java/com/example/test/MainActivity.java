@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Crittercism.initialize(getApplicationContext(), "");
+
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("vApteligent Demo");
@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * @param menu concerns the icon on the toolbar. It explains what action it will do.
-     * @return
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
